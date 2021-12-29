@@ -17,6 +17,7 @@ RUN apt update \
     && apt install --no-install-recommends -y \
         curl \
         build-essential \
+        openssh-client \
         git \
         openjdk-11-jre
 
