@@ -17,11 +17,12 @@ RUN apt update \
     && apt install --no-install-recommends -y \
         curl \
         build-essential \
+        git \
         openjdk-11-jre
 
 
 # Install Poetry - respects $POETRY_VERSION & $POETRY_HOME
-ENV POETRY_VERSION=1.1.8
+ENV POETRY_VERSION=1.1.12
 RUN curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python
 
 WORKDIR /app
