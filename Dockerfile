@@ -1,5 +1,7 @@
 FROM python:3.8.10-slim
 
+RUN mkdir -p /usr/share/man/man1
+
 ENV PYTHONUNBUFFERED=1 \
     PYTHONDONTWRITEBYTECODE=1 \
     PIP_NO_CACHE_DIR=off \
