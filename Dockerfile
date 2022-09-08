@@ -1,4 +1,4 @@
-FROM python:3.7-slim
+FROM python:3.8.10-slim
 
 ENV PYTHONUNBUFFERED=1 \
     PYTHONDONTWRITEBYTECODE=1 \
@@ -23,7 +23,7 @@ RUN apt update \
 
 
 # Install Poetry - respects $POETRY_VERSION & $POETRY_HOME
-ENV POETRY_VERSION=1.1.12
-RUN curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python
+ENV POETRY_VERSION=1.2
+RUN curl -sSL https://install.python-poetry.org | python
 
 WORKDIR /app
