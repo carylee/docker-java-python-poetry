@@ -23,10 +23,11 @@ RUN apt update \
         git \
         openjdk-11-jre
 
-RUN pip install -U pip setuptools
-
 # Install Poetry - respects $POETRY_VERSION & $POETRY_HOME
-ENV POETRY_VERSION=1.1.12
-RUN curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python
+ENV POETRY_VERSION=1.2
+
+RUN pip install pipx
+RUN pipx install "poetry==$POETRY_VERSION"
+RUN pipx ensurepath
 
 WORKDIR /app
